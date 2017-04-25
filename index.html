@@ -1,53 +1,62 @@
 <!DOCTYPE HTML>
 <html> 
+
 <head>
+
 <title> Speed Dating </title>
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="animatemin.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
-</head>
+
 <body>
-<div class="title">
-<
-<div id="name"> Can't Buy Me Love</div>
-<p id="demo"> </p>
+
+<ul>
+    <li class="n1"><a href="#">portfolio.</a></li>
+    <li class="n2"><a href="#">equipe.</a></li>
+    <li class="n3 selected"><a href="#">contact.</a></li>
+    <li class="quebec">&nbsp;</li>
+</ul>
+
+
+
+<div id="page">
+    <div class="champagne">
+        <img src="champagne.png" alt="champagne" style="height:150px;"></div>
+            <div id="name"> Can't Buy Me Love
+            </div>
+        <p id="demo"> </p>
 </div>
+
+<div id="loading">
+    Loading
+</div>
+
+
 <script>
-document.getElementById("demo").innerHTML = "My First JavaScript";
-//break the words
 
-var letterArr = $('.name').text().split("");
-//clear it
 
-$('.name').html('');
-//put the new contained letters back in
-for (var i = 0; i < letterArr.length; i++) {
-    var elm = "<span class='letterWrap'>" + letterArr[i] + "</span>";
-    
-    $('.name').append(elm);
-};
 
-//animate based on odd or even
-$('.letterWrap').each(function (i) {
-    
-    if (i % 2 == 0) {
-        $(this).delay(100 * i).animate({
-            "top": "-40px"
-        }, 500).animate({
-            "top": "0px"
-        }, 500);
-    } else {
-        $(this).delay(100 * i).animate({
-            "top": "40px"
-        }, 500).animate({
-            "top": "0px"
-        }, 500);
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 2000);
+
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
     }
+}
+
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function () {
+    show('page', true);
+    show('loading', false);
 });
 
-function getRand(min, max) {
-    return Math.random() * (max - min) + min;
-};
+
+
 
 </script>
 </body>
