@@ -5,6 +5,7 @@
 
 <title> Speed Dating </title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,8 @@
             <div id="name"> Can't Buy Me Love
             </div>
         <p id="demo"> </p>
+        <div id="Finance"></div>
+        <div id="Pro-Athlete"></div>
 </div>
 
 <div id="loading">
@@ -57,7 +60,51 @@ onReady(function () {
 
 
 
+trace1 = {
+  labels: ['Attractive', 'Sincere', 'Intelligent', 'Fun', 'Ambitious', 'Shared Interests'], 
+  labelssrc: 'eac85:130:2398b8', 
+  marker: {
+    colors: ['#E53935', '#EF5350', '#BDC3C7', '#EF9A9A', '#FFAB91', '#F44336'], 
+    colorssrc: 'eac85:130:a3428b'
+  }, 
+  textinfo: 'label', 
+  textposition: 'outside', 
+  type: 'pie', 
+  values: [30.667, 14.504, 20.812, 18.318, 9.6196, 10.624], 
+  valuessrc: 'eac85:130:b0e68a'
+};
+data = [trace1];
+layout = {
+  showlegend: false, 
+  title: 'Finance'
+};
+Plotly.plot('Finance', {
+  data: data,
+  layout: layout
+});
 
+trace2 = {
+  labels: ['Attractive', 'Sincere', 'Intelligent', 'Fun', 'Ambitious', 'Shared Interests'], 
+  labelssrc: 'eac85:136:f1463f', 
+  marker: {
+    colors: ['#E53935', '#EF5350', '#BDC3C7', '#EF9A9A', '#FFAB91', '#F44336'], 
+    colorssrc: 'eac85:136:fad10d'
+  }, 
+  textinfo: 'label', 
+  textposition: 'outside', 
+  type: 'pie', 
+  values: [60, 15, 0, 15, 0, 10], 
+  valuessrc: 'eac85:136:6e2be6'
+};
+data = [trace2];
+layout = {
+  showlegend: false, 
+  title: 'Pro Athlete'
+};
+Plotly.plot('Pro-Athlete', {
+  data: data,
+  layout: layout
+});
 </script>
 </body>
 </html>
