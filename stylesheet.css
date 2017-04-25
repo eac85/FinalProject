@@ -1,0 +1,26 @@
+@font-face{
+    font-family: Packaging;
+    src: url("Packaging Funny.woff");
+}
+/* Optional */
+#name {
+    font-family:Packaging;
+    text-align: center;
+    padding:100px;
+    margin: 15px;
+    background:pink;
+    color:black;
+    font-size: 100px;
+}
+
+.letterWrap {
+    font-size:50px;
+    /* These are needed */
+    position: relative;
+    top:0;
+}
+
+.title{
+ display: inline-block;
+
+}
