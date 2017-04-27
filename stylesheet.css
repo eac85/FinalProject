@@ -146,7 +146,13 @@ li:hover {
 .n2:hover ~ li.quebec { left: 100px; width: 57px; }
 .n3:hover ~ li.quebec { left: 177px; width: 69px; }
 
-
+.pie{
+    padding-left: 20%;
+    padding-right: 30%;
+    text-align:center;
+    display: inline-block;
+    
+}
 
 
 
