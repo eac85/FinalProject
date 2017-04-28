@@ -172,3 +172,14 @@ li:hover {
 
 }*/
 
+.info{font-size: 20px;
+font-family: Georgia;
+text-align:center;
+padding-left: 20%;
+padding-right: 20%;}
+
+.intro
+{text-align: left;
+font-family: Cream;
+font-size: 30px;
+padding-left: 10%;}

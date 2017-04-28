@@ -22,11 +22,19 @@
 <div id="page">
     <div class="champagne">
         <img src="Champagne.png" alt="champagne" style="height:150px;"></div>
-            <div id="name"> Can't Buy Me Love
-            </div>
+            <div id="name"> Can't Buy Me Love </div>
+
             <div style='text-align:center; padding-top: 10px;'>
+            <p  class="info"> Between 2002 and 2004, surveys were done during speed dating events of mostly college-aged kids. They asked participants a wide variety of questions about favored attributes, race, interests, income, and desired career. The survey had a lot of participants and asked the questions throughout the speed dating rounds. I chose to focus on the first 5 waves because they had the same critera. I also chose to only use data from the beginning. </p>
+            <p class='intro'> Expected Happiness and Income </p>
+            <p class= "info"> This scatter plot displays the relationship between average income in their hometown and how happy they expect to be with the partners they meet on the speed date. They were told to pick a number from one to ten (1 being least happy and 10 being the most happy). </p>
+            <iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~eac85/171.embed"></iframe>
+            <p class='intro'> Intended Career and Favored Attributes </p>
+            <p class= "info"> This horizontal bar chart breaks down the survey results into intended career. It further breaks them down into the average percentage of points given to each of the attributes. </p>
             <iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://plot.ly/~eac85/169.embed"></iframe>
-            <iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~eac85/171.embed"></iframe></div>
+           </div>
+           <p class='intro'> Expected Income and Most Desired Traits </p>
+           <p class = "info"> As you change the income level on the slider, different pie charts will be displayed that represent the fields that receive that salary. Each pie chart has the average scores given to each attribute. The participants were given 100 points and had to divvy them up between these characteristics. The most popular trait for each field is emphasized. </p>
             <div style="text-align: center; padding-top: 10px; font-family:Cream;">
             SALARY <br>
             <input type="range" id="sliderBar" min="0" max="200000" step="1000" value="0" onChange="showValue(this.value);"/>
