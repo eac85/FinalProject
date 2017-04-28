@@ -24,7 +24,11 @@
         <img src="Champagne.png" alt="champagne" style="height:150px;"></div>
             <div id="name"> Can't Buy Me Love
             </div>
-            <div style="text-align: center; padding-top: 10px;">
+            <div style='text-align:center; padding-top: 10px;'>
+            <iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://plot.ly/~eac85/169.embed"></iframe>
+            <iframe width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~eac85/171.embed"></iframe></div>
+            <div style="text-align: center; padding-top: 10px; font-family:Cream;">
+            SALARY <br>
             <input type="range" id="sliderBar" min="0" max="200000" step="1000" value="0" onChange="showValue(this.value);"/>
             <div id="result" style="height:40px;width:100%; text-align:center; font-size: 25px; font-family:Cream;">  </div> </div>
         <p id="pieCharts"> 
@@ -54,7 +58,7 @@
 
 
 function onReady(callback) {
-    var intervalID = window.setInterval(checkReady, 2000);
+    var intervalID = window.setInterval(checkReady, 5000);
 
     function checkReady() {
         if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -84,8 +88,8 @@ function showValue(num){
           tech.style.display = 'none';
           var proa = document.getElementById('proathlete');
           proa.style.display = 'none';
-          var ud = document.getElementById('undecided');
-          ud.style.display = 'none';
+          // var ud = document.getElementById('undecided');
+          // ud.style.display = 'none';
           var sw = document.getElementById('socialwork');
           sw.style.display = 'none';
           var fina = document.getElementById('finance');
@@ -101,7 +105,7 @@ function showValue(num){
 
 
            var result = document.getElementById('result');     
-           result.innerHTML = 'Salary: ' + num;
+           result.innerHTML = '$' + num;
         if(num > 24000 &&  num < 47000){
              
              humaff.style.display = 'inline';
